@@ -23,7 +23,7 @@ if('serviceWorker' in navigator) {
 
 let deferredPrompt;
 const addBtn = document.querySelector('.add-button');
-// addBtn.style.display = 'none';
+addBtn.style.display = 'block';
 
 window.addEventListener('beforeinstallprompt', (e) => {
   // Prevent Chrome 67 and earlier from automatically showing the prompt
@@ -36,7 +36,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
 
   addBtn.addEventListener('click', (e) => {
     // hide our user interface that shows our A2HS button
-    // addBtn.style.display = 'none';
+    addBtn.style.display = 'block';
     // Show the prompt
     deferredPrompt.prompt();
     // Wait for the user to respond to the prompt

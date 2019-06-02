@@ -50,7 +50,7 @@ function randomNotification() {
 		icon: notifImg
 	}
 	var notif = new Notification(notifTitle, options);
-	setTimeout(randomNotification, 600000);
+	setTimeout(randomNotification, 10000);
 };
 
 // Progressive loading images
@@ -112,7 +112,6 @@ addBtn.style.display = 'none';
 window.addEventListener('beforeinstallprompt', (e) => {
   // Prevent Chrome 67 and earlier from automatically showing the prompt
   e.preventDefault();
-  deferredPrompt.prompt();
   // Stash the event so it can be triggered later.
   deferredPrompt = e;
   // Update UI to notify the user they can add to home screen

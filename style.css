@@ -18,6 +18,11 @@ img {
   top: 1px;
   left: 1px;
 }
+#notifications {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+}
 
 @media (orientation: landscape) {
   img {

@@ -11,8 +11,9 @@
 	<meta property="og:image" content="icons/icon-512.png">
 	<title>Phụ Kiện BiJing</title>
     <link rel="shortcut icon" href="favicon.ico">
-    <link href="style.css" rel="stylesheet">
-    <script src="index.js" defer></script>
+	<link href="style.css" rel="stylesheet">
+	<script src="data/games.js" defer></script>
+	<script src="index.js" defer></script>
     <link rel="manifest" href="manifest.webmanifest">
 	
 	<!-- BOOTSTRAP CSS -->
@@ -23,7 +24,7 @@
 	<link href="lib/awesome/css/font-awesome.min.css" rel="stylesheet">
 
 	<!-- IMPORT FONT GOOGLE LINK -->
-	<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,700,300&amp;subset=vietnamese,latin,latin-ext" rel="stylesheet">
+	<!-- <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,700,300&amp;subset=vietnamese,latin,latin-ext" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -745,11 +746,12 @@
 			</div>
 		</div>
 	</footer>
+	<section id="content"></section>
 	<div class="copyright">
 		<div class="container">
 			<p>Copyright © 2016 <a href="http://themeviet.org/" target="_blank">Themeviet.org</a>. All Rights Reserved.</p>
 		<button class="add-button">Add to home screen</button>
-
+		<button id="notifications">Request dummy notifications</button>
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

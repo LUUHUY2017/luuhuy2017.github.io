@@ -66,7 +66,7 @@ function randomNotification() {
 		icon: notifImg
 	}
 	var notif = new Notification(notifTitle, options);
-	setTimeout(randomNotification, 60000);
+	setTimeout(randomNotification, 10000);
 };
 
 

@@ -1,39 +1,70 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>A2HS demo</title>
- 
-
-    <meta name="description" content="A list of A-Frame entries submitted to the js13kGames 2017 competition, used as an example for the MDN articles about Progressive Web Apps.">
-    <meta name="author" content="end3r">
-    <meta name="theme-color" content="#B12A34">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:image" content="icons/icon-512.png">
-    <link rel="shortcut icon" href="favicon.ico">
+<head>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha256-WOdSzz11/3cpqOdrm89LBL2UPwEU9EhbDtMy2OciEhs='">
+    <link rel="icon" type="image/x-icon" href="./images/ok.png">
+    <!--<script nonce="2726c7f26c" src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script nonce="2726c7f26c" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>-->
     <link rel="stylesheet" href="style.css">
-    <link href="style.css" rel="stylesheet">
-    <link rel="manifest" href="js13kpwa.webmanifest">
-    <script src="data/games.js" defer></script>
-    <script src="app.js" defer></script>
-    <!-- <script src="index.js" defer></script> -->
-    <link rel="manifest" href="manifest.webmanifest">
-  </head>
-  <body>
-    <img src="images/fox1.jpg" alt="a fox picture">
-    <div class="add-button">Add to home screen</div>
-    header>
-    <p><a class="logo" href="http://js13kgames.com"><img src="img/js13kgames.png" alt="js13kGames"></a></p>
-  </header>
-  <main>
-    <h1>js13kGames A-Frame entries</h1>
-    <p class="description">List of games submitted to the <a href="http://js13kgames.com/aframe">A-Frame category</a> in the <a href="http://2017.js13kgames.com">js13kGames 2017</a> competition. You can <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">fork js13kPWA on GitHub</a> to check its source code.</p>
-    <button id="notifications">Request dummy notifications</button>
-    <section id="content"></section>
-  </main>
-  <footer>
-    <p>&copy; js13kGames 2012-2018, created and maintained by <a href="http://end3r.com">Andrzej Mazur</a> from <a href="http://enclavegames.com">Enclave Games</a>.</p>
-  </footer>
-  </body>
+
+</head>
+<body>
+    <div class="container" style="position: relative">
+        <section id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="form__group field">
+                        <textarea rows="10" style="width:100%" type="text" class="name" name="name" id='name'> </textarea>
+                        <button id="confirm" style="font-weight:bold" for="name">XÁC NHẬN </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div style="position:relative">
+                <div style="text-align:center;font-size:25px" id="EventTime"></div>
+                <div id="myBtn" style="position:absolute; bottom:0px; right:7px; font-size:28px; cursor:pointer">
+                    <span>&#9881;</span>
+                </div>
+
+            </div>
+            <table style="width:100%;min-width: 696px">
+                <thead>
+                    <tr style="background: #8c6eff">
+                        <th style="width: 35%;position:relative; white-space: normal">
+                            <span> PC</span>
+                            <span style='position: absolute; top: 0; margin-left: 2px; font-size: 11px; color: firebrick'> (m) </span>
+                            <span style='position: absolute; top: 15px; margin-left: 2px; font-size: 11px; color: firebrick '> (3m) </span>
+                            <span style='position: absolute; bottom: 0; right: 0; font-size: 14px; color: firebrick '> (w)</span>
+                        </th>
+
+                        <th style="width: 30%; position: relative; white-space: normal ">
+                            <span> CPU</span>
+                            <span style='position: absolute; top: 0; margin-left: 2px; font-size: 11px; color: firebrick'> (hh) </span>
+                            <span style='position: absolute; top: 15px; margin-left: 2px; font-size: 11px; color: firebrick '> (lh) </span>
+                            <span style='position: absolute; bottom: 0; right: 0; font-size: 14px; color: firebrick '> (h)</span>
+                        </th>
+
+                        <th style="width: 35%; position: relative; white-space: normal ">
+                            <span> RAM</span>
+                            <span style='position: absolute; top: 0; margin-left: 2px; font-size: 11px; color: firebrick '> (hh) </span>
+                            <span style='position: absolute; top: 15px; margin-left: 2px; font-size: 11px; color: firebrick '> (lh) </span>
+                            <span style='position: absolute; bottom: 0; right: 0; font-size: 14px; color: firebrick '> (h)</span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="data">
+                </tbody>
+            </table>
+
+        </section>
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
 </html>
+

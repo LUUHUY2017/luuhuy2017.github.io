@@ -83,7 +83,7 @@ async function getIndex1() {
         }
         else {
             compare = "-";
-            percent = ((groups[i].ususd_ldd - groups[i].usd) / groups[i].usd_ld * 100).toFixed(2);
+            percent = ((groups[i].usd_ld - groups[i].usd) / groups[i].usd_ld * 100).toFixed(2);
         }
        
 

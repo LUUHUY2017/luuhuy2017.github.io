@@ -91,7 +91,7 @@ async function getIndex1() {
 
         para += `<tr>`;
         para += "<td style='position:relative' >"
-               + "<a  target='_blank' href='https://attlas.io/futures/" + groups[i].vnd_all.s + "' >" + groups[i].symbol + "</a>"
+            + "<a  target='_blank' href='https://attlas.io/futures/" + groups[i].vnd_all.s + "' >" + groups[i].symbol + "</a>"
            
             + "<span style='position:absolute; top:1px; margin-left:2px;  font-size:11px; color: " + (groups[i].usd >= groups[i].usd_p1m ? " #3ab829;" : "#fd254d;") + " '>" + new Intl.NumberFormat("de-DE").format(groups[i].usd_p1m) + " (" + new Intl.NumberFormat("de-DE").format(groups[i].vnd_p1m) + ")" + "</span>"
             + "<span style='position:absolute; top:15px; margin-left:2px;  font-size:11px; color: " + (groups[i].usd >= groups[i].usd_p3m ? " #3ab829;" : "#fd254d;") + " '>" + new Intl.NumberFormat("de-DE").format(groups[i].usd_p3m) + " (" + new Intl.NumberFormat("de-DE").format(groups[i].vnd_p3m) + ")" + "</span>"

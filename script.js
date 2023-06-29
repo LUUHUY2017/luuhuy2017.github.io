@@ -5,7 +5,7 @@ document.getElementById("confirm").addEventListener("click", onConfrim);
 
 async function getIndex() {
     document.getElementById("EventTime").innerHTML = dateToDDMMYYYHHMMSS(new Date()) || "";
-    getIndex1();
+    getIndex1(); 
 }
 
 

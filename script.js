@@ -3,6 +3,28 @@ setInterval(getIndex, 1000);
 document.getElementById("myBtn").addEventListener("click", onShowHideModal);
 document.getElementById("confirm").addEventListener("click", onConfrim);
 
+
+
+
+
+function getHref(name) {
+    var url = "https://attlas.io/futures/" + name;
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    let androidURL = 'https://play.google.com/store/apps/details?id=io.attlas';
+    let iosURL = 'https://apps.apple.com/tr/app/id1565481713';
+    let iosURL2 = 'https://apps.apple.com/tr/app/myApp/id1565481713';
+    let isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    if (/android/i.test(userAgent)) {
+        url = androidURL;
+    }
+    else if (isSafari) {
+        url = iosURL;
+    }
+    return url;
+}
+
+
+
 async function getIndex() {
     document.getElementById("EventTime").innerHTML = dateToDDMMYYYHHMMSS(new Date()) || "";
     getIndex1();
@@ -85,18 +107,18 @@ async function getIndex1() {
             compare = "-";
             percent = ((groups[i].usd_ld - groups[i].usd) / groups[i].usd_ld * 100).toFixed(2);
         }
-       
+
 
 
 
         para += `<tr>`;
         para += "<td style='position:relative' >"
-            + "<a  target='_blank' href='https://attlas.io/futures/" + groups[i].vnd_all.s + "' >" + groups[i].symbol + "</a>"
-           
+            + "<a  target='_blank' href='" + getHref(groups[i].vnd_all.s) + "' >" + groups[i].symbol + "</a>"
+
             + "<span style='position:absolute; top:1px; margin-left:2px;  font-size:11px; color: " + (groups[i].usd >= groups[i].usd_p1m ? " #3ab829;" : "#fd254d;") + " '>" + new Intl.NumberFormat("de-DE").format(groups[i].usd_p1m) + " (" + new Intl.NumberFormat("de-DE").format(groups[i].vnd_p1m) + ")" + "</span>"
             + "<span style='position:absolute; top:15px; margin-left:2px;  font-size:11px; color: " + (groups[i].usd >= groups[i].usd_p3m ? " #3ab829;" : "#fd254d;") + " '>" + new Intl.NumberFormat("de-DE").format(groups[i].usd_p3m) + " (" + new Intl.NumberFormat("de-DE").format(groups[i].vnd_p3m) + ")" + "</span>"
 
-            + "<span style='position:absolute; top:1px; right:0; font-size:14px; color: " + (compare=="+" ? " #3ab829;" : "#fd254d;") + " '>" + compare + percent +"%" + "</span>"
+            + "<span style='position:absolute; top:1px; right:0; font-size:14px; color: " + (compare == "+" ? " #3ab829;" : "#fd254d;") + " '>" + compare + percent + "%" + "</span>"
             + "<span style='position:absolute; bottom:0; right:0; font-size:14px; color: " + (groups[i].usd >= groups[i].usd_pw ? " #3ab829;" : "#fd254d;") + " '>" + new Intl.NumberFormat("de-DE").format(groups[i].usd_pw) + "</span>"
 
         para += "</td>";

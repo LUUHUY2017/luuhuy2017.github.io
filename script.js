@@ -245,10 +245,18 @@ async function GetCoinGood() {
 
         para += `</tr>`;
 
-        var compareName = topValues[i].compare == "+" ? " tăng " : " giảm ";
-        var mess = "Mã " + topValues[i].symbol + compareName + "đột biến " + topValues[i].percent + " %";
+        var compareName = "";
 
-        senMessage(mess);
+        if (topValues[i].compare == "+") {
+            compareName = " 🆗 tăng ";
+            var mess = " Mã " + topValues[i].symbol + compareName + "đột biến " + topValues[i].compare + topValues[i].percent + " %";
+            senMessageUp(mess);
+
+        } else {
+            compareName = " 🆘 giảm ";
+            var mess = " Mã " + topValues[i].symbol + compareName + "đột biến " + topValues[i].compare + topValues[i].percent + " %";
+            senMessageDown(mess);
+        }
     }
 
     const element = document.getElementById("data2");
@@ -303,7 +311,7 @@ input.addEventListener("keypress", function (event) {
     }
 });
 
-function senMessage(mess) {
+function senMessageUp(mess) {
     try {
         var requestOptions = {
             method: 'POST',
@@ -317,17 +325,16 @@ function senMessage(mess) {
         console.error(error);
     }
 }
-async function senMessage1() {
+async function senMessageDown(mess) {
     try {
-        var mess = "Đây là con bot tự động gửi từ huy";
-        var settings = {
-            "url": "https://api.telegram.org/bot6514337909:AAGl5ZmX_Fi7yXcJgnSPGQd6xaXUpDCYVBI/sendMessage?chat_id=1062521039&text=" + mess,
-            "method": "POST",
-            "timeout": 0,
+        var requestOptions = {
+            method: 'POST',
+            redirect: 'follow'
         };
-        $.ajax(settings).done(function (response) {
-            console.log(response);
-        });
+        fetch("https://api.telegram.org/bot6514337909:AAGl5ZmX_Fi7yXcJgnSPGQd6xaXUpDCYVBI/sendMessage?chat_id=-878543928&text= " + mess, requestOptions)
+            .then(response => response.text())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
     } catch (error) {
         console.error(error);
     }

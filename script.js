@@ -1,4 +1,5 @@
 getIndex();
+GetCoinGood();
 setInterval(getIndex, 1000);
 setInterval(GetCoinGood, 1000);
 
@@ -246,9 +247,10 @@ async function GetCoinGood() {
 
         var compareName = topValues[i].compare == "+" ? " tăng " : " giảm ";
         var mess = "Mã " + topValues[i].symbol + compareName + "đột biến" + topValues[i].percent + " %";
-        senMessage(mess);
 
+        senMessage(mess);
     }
+
     const element = document.getElementById("data2");
     element.innerHTML = para;
 
@@ -301,7 +303,7 @@ input.addEventListener("keypress", function (event) {
     }
 });
 
-async function senMessage(mess) {
+function senMessage(mess) {
     try {
         var requestOptions = {
             method: 'POST',

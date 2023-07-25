@@ -246,9 +246,7 @@ async function GetCoinGood() {
 
         var compareName = topValues[i].compare == "+" ? " tăng " : " giảm ";
         var mess = "Mã " + topValues[i].symbol + compareName + "đột biến" + topValues[i].percent + " %";
-        if (!isSent) {
             senMessage(mess);
-            isSent = true;
         }
     }
     const element = document.getElementById("data2");

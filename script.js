@@ -246,7 +246,7 @@ async function GetCoinGood() {
         para += `</tr>`;
 
         var compareName = topValues[i].compare == "+" ? " tăng " : " giảm ";
-        var mess = "Mã " + topValues[i].symbol + compareName + "đột biến" + topValues[i].percent + " %";
+        var mess = "Mã " + topValues[i].symbol + compareName + "đột biến " + topValues[i].percent + " %";
 
         senMessage(mess);
     }

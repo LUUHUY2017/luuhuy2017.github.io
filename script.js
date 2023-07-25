@@ -142,6 +142,7 @@ async function getIndex1() {
 
 
 
+
 var isSent = false;
 async function GetCoinGood() {
 
@@ -250,12 +251,12 @@ async function GetCoinGood() {
         if (topValues[i].compare == "+") {
             compareName = " 🆗 tăng ";
             var mess = " Mã " + topValues[i].symbol + compareName + "đột biến " + topValues[i].compare + topValues[i].percent + " %";
-        //    senMessageUp(mess);
+            //    senMessageUp(mess);
 
         } else {
             compareName = " 🆘 giảm ";
             var mess = " Mã " + topValues[i].symbol + compareName + "đột biến " + topValues[i].compare + topValues[i].percent + " %";
-        //    senMessageDown(mess);
+           //    senMessageDown(mess);
         }
     }
 

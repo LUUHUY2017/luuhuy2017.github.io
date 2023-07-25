@@ -56,7 +56,7 @@ async function getIndex1() {
 
     var groups = Object.keys(result).map(function (key) {
         //console.warn(result[key]);
-        return {    
+        return {
             symbol: key,
             usd: result[key][0].p,
             usd_ph: result[key][0].ph,
@@ -141,7 +141,7 @@ async function getIndex1() {
 
 
 
-
+var isSent = false;
 async function GetCoinGood() {
 
     const res = await fetch("https://api.attlas.io/api/v1/futures/market_watch");
@@ -204,11 +204,11 @@ async function GetCoinGood() {
     }
 
     var topValues = groups.sort((a, b) => b.percent - a.percent).slice(1, 3);
-    console.log(topValues);  
+    console.log(topValues);
 
     var para = "";
-    for (var i = 0; i < topValues.length; i++) {
 
+    for (var i = 0; i < topValues.length; i++) {
         para += `<tr>`;
         para += "<td style='position:relative' >"
             + "<a  target='_blank' href='" + getHref(topValues[i].vnd_all.s) + "' >" + topValues[i].symbol + "</a>"
@@ -242,14 +242,19 @@ async function GetCoinGood() {
 
         para += "</td>";
 
-
-
         para += `</tr>`;
+
+        var compareName = topValues[i].compare == "+" ? " tăng " : " giảm ";
+        var mess = "Mã " + topValues[i].symbol + compareName + "đột biến" + topValues[i].percent + " %";
+        if (!isSent) {
+            senMessage(mess);
+            isSent = true;
+        }
     }
     const element = document.getElementById("data2");
     element.innerHTML = para;
 
-    //senMessage();
+
 }
 
 
@@ -298,9 +303,8 @@ input.addEventListener("keypress", function (event) {
     }
 });
 
-async function senMessage() {
+async function senMessage(mess) {
     try {
-        var mess = "Đây là con bot tự động gửi từ huy";
         var requestOptions = {
             method: 'POST',
             redirect: 'follow'

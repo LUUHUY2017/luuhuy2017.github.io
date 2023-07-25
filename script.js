@@ -1,7 +1,7 @@
 getIndex();
-GetCoinGood();
+//GetCoinGood();
 setInterval(getIndex, 1000);
-setInterval(GetCoinGood, 1000);
+//setInterval(GetCoinGood, 1000);
 
 document.getElementById("myBtn").addEventListener("click", onShowHideModal);
 document.getElementById("confirm").addEventListener("click", onConfrim);

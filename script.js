@@ -1,7 +1,7 @@
 getIndex();
-//GetCoinGood();
+GetCoinGood();
 setInterval(getIndex, 1000);
-//setInterval(GetCoinGood, 1000);
+setInterval(GetCoinGood, 1000);
 
 document.getElementById("myBtn").addEventListener("click", onShowHideModal);
 document.getElementById("confirm").addEventListener("click", onConfrim);
@@ -250,12 +250,12 @@ async function GetCoinGood() {
         if (topValues[i].compare == "+") {
             compareName = " 🆗 tăng ";
             var mess = " Mã " + topValues[i].symbol + compareName + "đột biến " + topValues[i].compare + topValues[i].percent + " %";
-            senMessageUp(mess);
+        //    senMessageUp(mess);
 
         } else {
             compareName = " 🆘 giảm ";
             var mess = " Mã " + topValues[i].symbol + compareName + "đột biến " + topValues[i].compare + topValues[i].percent + " %";
-            senMessageDown(mess);
+        //    senMessageDown(mess);
         }
     }
 

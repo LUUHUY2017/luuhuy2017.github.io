@@ -114,7 +114,7 @@ async function getIndex1() {
 
 
         para += "<td style='position:relative' >"
-            + "<a  target='_blank' href='https://www.bybit.com/vi-VN/trade/spot/" + groups[i].vnd_all.b + "/USDT' >" + new Intl.NumberFormat("de-DE").format(groups[i].usd) + "</a>"
+            + "<a  target='_blank' href='https://www.okx.com/vi/trade-swap/" + groups[i].vnd_all.b + "-usdt-swap'>" + new Intl.NumberFormat("de-DE").format(groups[i].usd) + "</a>"
 
             + "<span style='position:absolute; top:1px; margin-left:2px;  font-size:11px; color: #3ab829;'>" + new Intl.NumberFormat("de-DE").format(groups[i].usd_h) + "</span>"
             + "<span style='position:absolute; top:15px; margin-left:2px;  font-size:11px; color: #fd254d;'>" + new Intl.NumberFormat("de-DE").format(groups[i].usd_lh) + "</span>"
@@ -229,7 +229,7 @@ async function GetCoinGood() {
 
 
         para += "<td style='position:relative' >"
-            + "<a  target='_blank' href='https://www.bybit.com/vi-VN/trade/spot/" + topValues[i].vnd_all.b + "/USDT' >" + new Intl.NumberFormat("de-DE").format(topValues[i].usd) + "</a>"
+            + "<a  target='_blank' href='https://www.okx.com/vi/trade-swap/" + topValues[i].vnd_all.b + "-usdt-swap'>" + new Intl.NumberFormat("de-DE").format(topValues[i].usd) + "</a>"
 
             + "<span style='position:absolute; top:1px; margin-left:2px;  font-size:11px; color: #3ab829;'>" + new Intl.NumberFormat("de-DE").format(topValues[i].usd_h) + "</span>"
             + "<span style='position:absolute; top:15px; margin-left:2px;  font-size:11px; color: #fd254d;'>" + new Intl.NumberFormat("de-DE").format(topValues[i].usd_lh) + "</span>"

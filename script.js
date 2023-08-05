@@ -101,7 +101,10 @@ async function getIndex1() {
         para += "<td style='position:relative' >"
             + "<a  target='_blank' href='" + getHref(groups[i].vnd_all.s) + "' >" + groups[i].symbol + "</a>"
 
-            + "<span style='position:absolute; top:1px; margin-left:2px;  font-size:11px; color: " + (groups[i].usd >= groups[i].usd_p1m ? " #3ab829;" : "#fd254d;") + " '>" + new Intl.NumberFormat("de-DE").format(groups[i].usd_p1m) + " (" + new Intl.NumberFormat("de-DE").format(groups[i].vnd_p1m) + ")" + "</span>"
+            + " <span style='position:absolute; top:1px; margin-left:2px;  font-size:11px; color: " + (groups[i].usd >= groups[i].usd_p1m ? " #3ab829;" : "#fd254d;") + " '>" + new Intl.NumberFormat("de-DE").format(groups[i].usd_p1m) + " (" + new Intl.NumberFormat("de-DE").format(groups[i].vnd_p1m) + ")" + "</span> "
+
+
+
             + "<span style='position:absolute; top:15px; margin-left:2px;  font-size:11px; color: " + (groups[i].usd >= groups[i].usd_p3m ? " #3ab829;" : "#fd254d;") + " '>" + new Intl.NumberFormat("de-DE").format(groups[i].usd_p3m) + " (" + new Intl.NumberFormat("de-DE").format(groups[i].vnd_p3m) + ")" + "</span>"
 
             + "<span style='position:absolute; top:1px; right:0; font-size:14px; color: " + (compare == "+" ? " #3ab829;" : "#fd254d;") + " '>" + compare + percent + "%" + "</span>"
@@ -111,7 +114,7 @@ async function getIndex1() {
 
 
         para += "<td style='position:relative' >"
-            + new Intl.NumberFormat("de-DE").format(groups[i].usd)
+            + "<a  target='_blank' href='https://www.bybit.com/vi-VN/trade/spot/" + groups[i].vnd_all.b + "/USDT' >" + new Intl.NumberFormat("de-DE").format(groups[i].usd) + "</a>"
 
             + "<span style='position:absolute; top:1px; margin-left:2px;  font-size:11px; color: #3ab829;'>" + new Intl.NumberFormat("de-DE").format(groups[i].usd_h) + "</span>"
             + "<span style='position:absolute; top:15px; margin-left:2px;  font-size:11px; color: #fd254d;'>" + new Intl.NumberFormat("de-DE").format(groups[i].usd_lh) + "</span>"
@@ -139,7 +142,6 @@ async function getIndex1() {
 
     //senMessage();
 }
-
 
 
 
@@ -215,7 +217,8 @@ async function GetCoinGood() {
         para += "<td style='position:relative' >"
             + "<a  target='_blank' href='" + getHref(topValues[i].vnd_all.s) + "' >" + topValues[i].symbol + "</a>"
 
-            + "<span style='position:absolute; top:1px; margin-left:2px;  font-size:11px; color: " + (topValues[i].usd >= topValues[i].usd_p1m ? " #3ab829;" : "#fd254d;") + " '>" + new Intl.NumberFormat("de-DE").format(topValues[i].usd_p1m) + " (" + new Intl.NumberFormat("de-DE").format(topValues[i].vnd_p1m) + ")" + "</span>"
+            + "  <span style='position:absolute; top:1px; margin-left:2px;  font-size:11px; color: " + (topValues[i].usd >= topValues[i].usd_p1m ? " #3ab829;" : "#fd254d;") + " '>" + new Intl.NumberFormat("de-DE").format(topValues[i].usd_p1m) + " (" + new Intl.NumberFormat("de-DE").format(topValues[i].vnd_p1m) + ")" + "</span>  "
+
             + "<span style='position:absolute; top:15px; margin-left:2px;  font-size:11px; color: " + (topValues[i].usd >= topValues[i].usd_p3m ? " #3ab829;" : "#fd254d;") + " '>" + new Intl.NumberFormat("de-DE").format(topValues[i].usd_p3m) + " (" + new Intl.NumberFormat("de-DE").format(topValues[i].vnd_p3m) + ")" + "</span>"
 
             + "<span style='position:absolute; top:1px; right:0; font-size:14px; color: " + (topValues[i].compare == "+" ? " #3ab829;" : "#fd254d;") + " '>" + topValues[i].compare + topValues[i].percent + "%" + "</span>"
@@ -225,7 +228,7 @@ async function GetCoinGood() {
 
 
         para += "<td style='position:relative' >"
-            + new Intl.NumberFormat("de-DE").format(topValues[i].usd)
+            + "<a  target='_blank' href='https://www.bybit.com/vi-VN/trade/spot/" + topValues[i].vnd_all.b + "/USDT' >" + new Intl.NumberFormat("de-DE").format(topValues[i].usd) + "</a>"
 
             + "<span style='position:absolute; top:1px; margin-left:2px;  font-size:11px; color: #3ab829;'>" + new Intl.NumberFormat("de-DE").format(topValues[i].usd_h) + "</span>"
             + "<span style='position:absolute; top:15px; margin-left:2px;  font-size:11px; color: #fd254d;'>" + new Intl.NumberFormat("de-DE").format(topValues[i].usd_lh) + "</span>"
@@ -248,16 +251,16 @@ async function GetCoinGood() {
 
         var compareName = "";
 
-        if (topValues[i].compare == "+") {
-            compareName = " 🆗 tăng ";
-            var mess = " Mã " + topValues[i].symbol + compareName + "đột biến " + topValues[i].compare + topValues[i].percent + " %";
-            //    senMessageUp(mess);
+        // if (topValues[i].compare == "+") {
+        // compareName = " 🆗 tăng ";
+        // var mess = " Mã " + topValues[i].symbol + compareName + "đột biến " + topValues[i].compare + topValues[i].percent + " %";
+        // senMessageUp(mess);
 
-        } else {
-            compareName = " 🆘 giảm ";
-            var mess = " Mã " + topValues[i].symbol + compareName + "đột biến " + topValues[i].compare + topValues[i].percent + " %";
-           //    senMessageDown(mess);
-        }
+        // } else {
+        // compareName = " 🆘 giảm ";
+        // var mess = " Mã " + topValues[i].symbol + compareName + "đột biến " + topValues[i].compare + topValues[i].percent + " %";
+        // senMessageDown(mess);
+        // }
     }
 
     const element = document.getElementById("data2");

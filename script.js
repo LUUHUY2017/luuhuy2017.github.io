@@ -239,7 +239,7 @@ async function GetCoinGood() {
         para += "</td>";
 
         para += "<td style='position:relative' >"
-            + "<a  target='_blank' href='https://pro.goonus.io/futures/" + topValues[i].vnd_all.b + "_VND' >" + new Intl.NumberFormat("de-DE").format(topValues[i].usd) + "</a>"
+            + "<a  target='_blank' href='https://pro.goonus.io/futures/" + topValues[i].vnd_all.b + "_VND' >" + new Intl.NumberFormat("de-DE").format(topValues[i].vnd) + "</a>"
 
             + "<span style='position:absolute; top:1px; margin-left:2px;  font-size:11px; color: #3ab829;'>" + new Intl.NumberFormat("de-DE").format(topValues[i].vnd_h) + "</span>"
             + "<span style='position:absolute; top:15px; margin-left:2px;  font-size:11px; color: #fd254d;'>" + new Intl.NumberFormat("de-DE").format(topValues[i].vnd_lh) + "</span>"

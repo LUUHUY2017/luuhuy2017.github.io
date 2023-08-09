@@ -124,13 +124,12 @@ async function getIndex1() {
         para += "</td>";
 
         para += "<td style='position:relative' >"
-            + "<a  target='_blank' href='https://pro.goonus.io/futures/" + groups[i].vnd_all.b + "_VND' >" + new Intl.NumberFormat("de-DE").format(groups[i].vnd) + "</a>"
-
+            + "<a  target='_blank' href='https://www.binance.com/en/trading-bots/futures/grid/" + groups[i].vnd_all.b + "USDT' >" + new Intl.NumberFormat("de-DE").format(groups[i].vnd) + "</a>"
 
             + "<span style='position:absolute; top:1px; margin-left:2px;  font-size:11px; color: #3ab829;'>" + new Intl.NumberFormat("de-DE").format(groups[i].vnd_h) + "</span>"
             + "<span style='position:absolute; top:15px; margin-left:2px;  font-size:11px; color: #fd254d;'>" + new Intl.NumberFormat("de-DE").format(groups[i].vnd_lh) + "</span>"
 
-            + "<span style='position:absolute; bottom:0; right:0; font-size:14px; color:" + (groups[i].vnd >= groups[i].vnd_ph ? " #3ab829;" : "#fd254d;") + " '>" + new Intl.NumberFormat("de-DE").format(groups[i].vnd_ph) + "</span>"
+            + "<a  target='_blank' href='https://pro.goonus.io/futures/" + groups[i].vnd_all.b + "_VND' > <span style='position:absolute; bottom:0; right:0; font-size:14px; color:" + (groups[i].vnd >= groups[i].vnd_ph ? " #3ab829;" : "#fd254d;") + " '>" + new Intl.NumberFormat("de-DE").format(groups[i].vnd_ph) + "</span></a>"
 
         para += "</td>";
 
@@ -238,13 +237,14 @@ async function GetCoinGood() {
 
         para += "</td>";
 
+
         para += "<td style='position:relative' >"
-            + "<a  target='_blank' href='https://pro.goonus.io/futures/" + topValues[i].vnd_all.b + "_VND' >" + new Intl.NumberFormat("de-DE").format(topValues[i].vnd) + "</a>"
+            + "<a  target='_blank' href='https://www.binance.com/en/trading-bots/futures/grid/" + topValues[i].vnd_all.b + "USDT' >" + new Intl.NumberFormat("de-DE").format(topValues[i].vnd) + "</a>"
 
             + "<span style='position:absolute; top:1px; margin-left:2px;  font-size:11px; color: #3ab829;'>" + new Intl.NumberFormat("de-DE").format(topValues[i].vnd_h) + "</span>"
             + "<span style='position:absolute; top:15px; margin-left:2px;  font-size:11px; color: #fd254d;'>" + new Intl.NumberFormat("de-DE").format(topValues[i].vnd_lh) + "</span>"
 
-            + "<span style='position:absolute; bottom:0; right:0; font-size:14px; color:" + (topValues[i].vnd >= topValues[i].vnd_ph ? " #3ab829;" : "#fd254d;") + " '>" + new Intl.NumberFormat("de-DE").format(topValues[i].vnd_ph) + "</span>"
+            + "<a  target='_blank' href='https://pro.goonus.io/futures/" + topValues[i].vnd_all.b + "_VND' > <span style='position:absolute; bottom:0; right:0; font-size:14px; color:" + (topValues[i].vnd >= topValues[i].vnd_ph ? " #3ab829;" : "#fd254d;") + " '>" + new Intl.NumberFormat("de-DE").format(topValues[i].vnd_ph) + "</span></a>"
 
         para += "</td>";
 

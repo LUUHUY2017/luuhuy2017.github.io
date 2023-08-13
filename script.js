@@ -2,11 +2,22 @@ getIndex();
 GetCoinGood();
 setInterval(getIndex, 1000);
 setInterval(GetCoinGood, 1000);
+play();
 
 document.getElementById("myBtn").addEventListener("click", onShowHideModal);
 document.getElementById("confirm").addEventListener("click", onConfrim);
 
-
+  function play() {
+    const audio = document.createElement("audio");
+    audio.muted = true;
+    audio.pause();
+    audio.muted = false;
+    const source = document.createElement("source");
+    source.src = "https://nhacchuong123.com/nhac-chuong/abc/nhac-chuong-thong-bao-messenger.mp3";
+    audio.appendChild(source);
+    audio.currentTime = 0;
+    audio.play();  
+}
 
 
 function getHref(name) {

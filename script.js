@@ -2,22 +2,50 @@ getIndex();
 GetCoinGood();
 setInterval(getIndex, 1000);
 setInterval(GetCoinGood, 1000);
-play();
-
+// play();
 document.getElementById("myBtn").addEventListener("click", onShowHideModal);
 document.getElementById("confirm").addEventListener("click", onConfrim);
 
-  function play() {
-    const audio = document.createElement("audio");
-    audio.muted = true;
-    audio.pause();
-    audio.muted = false;
-    const source = document.createElement("source");
-    source.src = "https://nhacchuong123.com/nhac-chuong/abc/nhac-chuong-thong-bao-messenger.mp3";
-    audio.appendChild(source);
-    audio.currentTime = 0;
-    audio.play();  
+//function play() {
+//    var audio = new Audio();
+//    audio.src = "https://www.freesoundslibrary.com/wp-content/uploads/2021/06/ding-ding-sound-effect.mp3";
+//    // when the sound has been loaded, execute your code
+//    audio.oncanplaythrough = (event) => {
+//        var playedPromise = audio.play();
+//        if (playedPromise) {
+//            playedPromise.catch((e) => {
+//                console.log(e)
+//                if (e.name === 'NotAllowedError' || e.name === 'NotSupportedError') {
+//                    console.log(e.name);
+//                }
+//            }).then(() => {
+//                console.log("playing sound !!!");
+//            });
+//        }
+
+
+//    }
+//}
+
+// Get the #app element
+let app = document.querySelector('#app');
+
+// Track the count
+let count = 5;
+
+/**
+ * Play the chime sound
+ */
+function playSound() {
+    let ding = new Audio('https://www.freesoundslibrary.com/wp-content/uploads/2021/06/ding-ding-sound-effect.mp3');
+    ding.muted = true;
+    ding.play();
 }
+
+// Run a callback function once every second
+let timer = setInterval(function () {
+    playSound();
+}, 1000);
 
 
 function getHref(name) {

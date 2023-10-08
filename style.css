@@ -617,11 +617,7 @@ h3 {
 	}
 }
 
-
-body {
-    /* background-color: White; */
-}
-
+ 
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -632,10 +628,6 @@ td, th {
     border: 1px solid slategrey;
     text-align: left;
     padding: 8px;
-}
-
-tr:nth-child(even) {
-    /* background-color: #dddddd; */
 }
 
 table {

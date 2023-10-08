@@ -293,8 +293,7 @@ h6 {
 .single-feature p {
 	font-size: 13px;
 }
-.icon-border {
-}
+
 .icon-border span {
 	display: block;
 	position: relative;
@@ -699,4 +698,8 @@ table {
     to {
         opacity: 1
     }
+}
+
+#tradingview_c60f0{
+	height: calc(100vh - 89px) !important;
 }

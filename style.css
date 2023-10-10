@@ -592,10 +592,16 @@ input {
         margin-bottom: 0px;
     }
 
+@media only screen and (min-width: 769px) {
+    table {
+        font-size: 30px;
+    }
+}
+
 @media all and (max-width:991px) {
     .navbar .navbar-collapse {
         overflow: auto;
-        background: rgb(213, 198, 221);
+        background: rgb(96 67 199);
         color: #fff !important;
         text-align: center;
         padding: 10px 0;
@@ -608,12 +614,21 @@ input {
     #contact_form {
         margin-bottom: 20px;
     }
+
+    .nav-scroll {
+        background: transparent !important;
+    }
+
+        .nav-scroll a img {
+            display: none !important;
+        }
 }
 
 @media all and (max-width:768px) {
     .nav-scroll .navbar-brand img, .navbar-brand img {
         transform: scale(0.75) !important;
         -webkit-transform: scale(0.75) !important;
+        display: none !important;
     }
 
     .banner-text {
@@ -726,19 +741,31 @@ input {
     .footer-copy p {
         font-size: 10px;
     }
-}
 
-@media only screen and (max-width: 600px) {
     table {
         font-size: 13px;
     }
-}
 
-@media only screen and (min-width: 600px) {
-    table {
-        font-size: 30px;
+        table td span {
+            font-size: 9px !important;
+        }
+
+        table td a {
+            font-size: 13px !important;
+            font-weight: bold;
+        }
+
+    #_icon_select ul{
+        margin-bottom:7rem;
+    }
+
+    .banner {
+        padding: 40px 0px !important;
     }
 }
+
+
+
 
 
 table {

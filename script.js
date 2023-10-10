@@ -1,4 +1,4 @@
-﻿getIndex();
+getIndex();
 GetCoinGood();
 setInterval(getIndex, 1000);
 setInterval(GetCoinGood, 1000);
@@ -144,14 +144,14 @@ async function getIndex1() {
         para += "<td style='position:relative' >"
             + "<a  target='_blank' href='" + getHref(groups[i].vnd_all.s) + "' >" + groups[i].symbol + "</a>"
 
-            + " <span style='position:absolute; top:1px; margin-left:2px;  font-size:11px; color: " + (groups[i].usd >= groups[i].usd_p1m ? " #3ab829;" : "#fd254d;") + " '>" + new Intl.NumberFormat("de-DE").format(groups[i].usd_p1m) + " (" + new Intl.NumberFormat("de-DE").format(groups[i].vnd_p1m) + ")" + "</span> "
+            + " <span style='position:absolute; top:1px; margin-left:2px;  font-size:11px; color: " + (groups[i].usd >= groups[i].usd_p1m ? " #c3ffbb;" : "#b70526;") + " '>" + new Intl.NumberFormat("de-DE").format(groups[i].usd_p1m) + " (" + new Intl.NumberFormat("de-DE").format(groups[i].vnd_p1m) + ")" + "</span> "
 
 
 
-            + "<span style='position:absolute; top:15px; margin-left:2px;  font-size:11px; color: " + (groups[i].usd >= groups[i].usd_p3m ? " #3ab829;" : "#fd254d;") + " '>" + new Intl.NumberFormat("de-DE").format(groups[i].usd_p3m) + " (" + new Intl.NumberFormat("de-DE").format(groups[i].vnd_p3m) + ")" + "</span>"
+            + "<span style='position:absolute; top:15px; margin-left:2px;  font-size:11px; color: " + (groups[i].usd >= groups[i].usd_p3m ? " #c3ffbb;" : "#b70526;") + " '>" + new Intl.NumberFormat("de-DE").format(groups[i].usd_p3m) + " (" + new Intl.NumberFormat("de-DE").format(groups[i].vnd_p3m) + ")" + "</span>"
 
-            + "<span style='position:absolute; top:1px; right:0; font-size:14px; color: " + (compare == "+" ? " #3ab829;" : "#fd254d;") + " '>" + compare + percent + "%" + "</span>"
-            + "<span style='position:absolute; bottom:0; right:0; font-size:14px; color: " + (groups[i].usd >= groups[i].usd_pw ? " #3ab829;" : "#fd254d;") + " '>" + new Intl.NumberFormat("de-DE").format(groups[i].usd_pw) + "</span>"
+            + "<span style='position:absolute; top:1px; right:0; font-size:14px; color: " + (compare == "+" ? " #c3ffbb;" : "#b70526;") + " '>" + compare + percent + "%" + "</span>"
+            + "<span style='position:absolute; bottom:0; right:0; font-size:14px; color: " + (groups[i].usd >= groups[i].usd_pw ? " #c3ffbb;" : "#b70526;") + " '>" + new Intl.NumberFormat("de-DE").format(groups[i].usd_pw) + "</span>"
 
         para += "</td>";
 
@@ -159,20 +159,20 @@ async function getIndex1() {
         para += "<td style='position:relative' >"
             + "<a  target='_blank' href='https://www.okx.com/vi/trade-swap/" + groups[i].vnd_all.b + "-usdt-swap'>" + new Intl.NumberFormat("de-DE").format(groups[i].usd) + "</a>"
 
-            + "<span style='position:absolute; top:1px; margin-left:2px;  font-size:11px; color: #3ab829;'>" + new Intl.NumberFormat("de-DE").format(groups[i].usd_h) + "</span>"
-            + "<span style='position:absolute; top:15px; margin-left:2px;  font-size:11px; color: #fd254d;'>" + new Intl.NumberFormat("de-DE").format(groups[i].usd_lh) + "</span>"
+            + "<span style='position:absolute; top:1px; margin-left:2px;  font-size:11px; color: #c3ffbb;'>" + new Intl.NumberFormat("de-DE").format(groups[i].usd_h) + "</span>"
+            + "<span style='position:absolute; top:15px; margin-left:2px;  font-size:11px; color: #b70526;'>" + new Intl.NumberFormat("de-DE").format(groups[i].usd_lh) + "</span>"
 
-            + "<span style='position:absolute; bottom:0; right:0; font-size:14px;  color:  " + (groups[i].usd >= groups[i].usd_ph ? " #3ab829;" : "#fd254d;") + " '>" + new Intl.NumberFormat("de-DE").format(groups[i].usd_ph) + "</span>"
+            + "<span style='position:absolute; bottom:0; right:0; font-size:14px;  color:  " + (groups[i].usd >= groups[i].usd_ph ? " #c3ffbb;" : "#b70526;") + " '>" + new Intl.NumberFormat("de-DE").format(groups[i].usd_ph) + "</span>"
 
         para += "</td>";
 
         para += "<td style='position:relative' >"
             + "<a  target='_blank' href='https://www.binance.com/en/trading-bots/futures/grid/" + groups[i].vnd_all.b + "USDT' >" + new Intl.NumberFormat("de-DE").format(groups[i].vnd) + "</a>"
 
-            + "<span style='position:absolute; top:1px; margin-left:2px;  font-size:11px; color: #3ab829;'>" + new Intl.NumberFormat("de-DE").format(groups[i].vnd_h) + "</span>"
-            + "<span style='position:absolute; top:15px; margin-left:2px;  font-size:11px; color: #fd254d;'>" + new Intl.NumberFormat("de-DE").format(groups[i].vnd_lh) + "</span>"
+            + "<span style='position:absolute; top:1px; right:6px;  font-size:11px; color: #c3ffbb;'>" + new Intl.NumberFormat("de-DE").format(groups[i].vnd_h) + "</span>"
+            + "<span style='position:absolute; top:15px;right:6px;  font-size:11px; color: #b70526;'>" + new Intl.NumberFormat("de-DE").format(groups[i].vnd_lh) + "</span>"
 
-            + "<a  target='_blank' href='https://pro.goonus.io/futures/" + groups[i].vnd_all.b + "_VND' > <span style='position:absolute; bottom:0; right:0; font-size:14px; color:" + (groups[i].vnd >= groups[i].vnd_ph ? " #3ab829;" : "#fd254d;") + " '>" + new Intl.NumberFormat("de-DE").format(groups[i].vnd_ph) + "</span></a>"
+            + "<a  target='_blank' href='https://pro.goonus.io/futures/" + groups[i].vnd_all.b + "_VND' > <span style='position:absolute; bottom:0; right:0; font-size:14px; color:" + (groups[i].vnd >= groups[i].vnd_ph ? " #c3ffbb;" : "#b70526;") + " '>" + new Intl.NumberFormat("de-DE").format(groups[i].vnd_ph) + "</span></a>"
 
         para += "</td>";
 
@@ -261,12 +261,12 @@ async function GetCoinGood() {
         para += "<td style='position:relative' >"
             + "<a  target='_blank' href='" + getHref(topValues[i].vnd_all.s) + "' >" + topValues[i].symbol + "</a>"
 
-            + "  <span style='position:absolute; top:1px; margin-left:2px;  font-size:11px; color: " + (topValues[i].usd >= topValues[i].usd_p1m ? " #3ab829;" : "#fd254d;") + " '>" + new Intl.NumberFormat("de-DE").format(topValues[i].usd_p1m) + " (" + new Intl.NumberFormat("de-DE").format(topValues[i].vnd_p1m) + ")" + "</span>  "
+            + "  <span style='position:absolute; top:1px; margin-left:2px;  font-size:11px; color: " + (topValues[i].usd >= topValues[i].usd_p1m ? " #c3ffbb;" : "#b70526;") + " '>" + new Intl.NumberFormat("de-DE").format(topValues[i].usd_p1m) + " (" + new Intl.NumberFormat("de-DE").format(topValues[i].vnd_p1m) + ")" + "</span>  "
 
-            + "<span style='position:absolute; top:15px; margin-left:2px;  font-size:11px; color: " + (topValues[i].usd >= topValues[i].usd_p3m ? " #3ab829;" : "#fd254d;") + " '>" + new Intl.NumberFormat("de-DE").format(topValues[i].usd_p3m) + " (" + new Intl.NumberFormat("de-DE").format(topValues[i].vnd_p3m) + ")" + "</span>"
+            + "<span style='position:absolute; top:15px; margin-left:2px;  font-size:11px; color: " + (topValues[i].usd >= topValues[i].usd_p3m ? " #c3ffbb;" : "#b70526;") + " '>" + new Intl.NumberFormat("de-DE").format(topValues[i].usd_p3m) + " (" + new Intl.NumberFormat("de-DE").format(topValues[i].vnd_p3m) + ")" + "</span>"
 
-            + "<span style='position:absolute; top:1px; right:0; font-size:14px; color: " + (topValues[i].compare == "+" ? " #3ab829;" : "#fd254d;") + " '>" + topValues[i].compare + topValues[i].percent + "%" + "</span>"
-            + "<span style='position:absolute; bottom:0; right:0; font-size:14px; color: " + (topValues[i].usd >= topValues[i].usd_pw ? " #3ab829;" : "#fd254d;") + " '>" + new Intl.NumberFormat("de-DE").format(topValues[i].usd_pw) + "</span>"
+            + "<span style='position:absolute; top:1px; right:0; font-size:14px; color: " + (topValues[i].compare == "+" ? " #c3ffbb;" : "#b70526;") + " '>" + topValues[i].compare + topValues[i].percent + "%" + "</span>"
+            + "<span style='position:absolute; bottom:0; right:0; font-size:14px; color: " + (topValues[i].usd >= topValues[i].usd_pw ? " #c3ffbb;" : "#b70526;") + " '>" + new Intl.NumberFormat("de-DE").format(topValues[i].usd_pw) + "</span>"
 
         para += "</td>";
 
@@ -274,10 +274,10 @@ async function GetCoinGood() {
         para += "<td style='position:relative' >"
             + "<a  target='_blank' href='https://www.okx.com/vi/trade-swap/" + topValues[i].vnd_all.b + "-usdt-swap'>" + new Intl.NumberFormat("de-DE").format(topValues[i].usd) + "</a>"
 
-            + "<span style='position:absolute; top:1px; margin-left:2px;  font-size:11px; color: #3ab829;'>" + new Intl.NumberFormat("de-DE").format(topValues[i].usd_h) + "</span>"
-            + "<span style='position:absolute; top:15px; margin-left:2px;  font-size:11px; color: #fd254d;'>" + new Intl.NumberFormat("de-DE").format(topValues[i].usd_lh) + "</span>"
+            + "<span style='position:absolute; top:1px; margin-left:2px;  font-size:11px; color: #c3ffbb;'>" + new Intl.NumberFormat("de-DE").format(topValues[i].usd_h) + "</span>"
+            + "<span style='position:absolute; top:15px; margin-left:2px;  font-size:11px; color: #b70526;'>" + new Intl.NumberFormat("de-DE").format(topValues[i].usd_lh) + "</span>"
 
-            + "<span style='position:absolute; bottom:0; right:0; font-size:14px;  color:  " + (topValues[i].usd >= topValues[i].usd_ph ? " #3ab829;" : "#fd254d;") + " '>" + new Intl.NumberFormat("de-DE").format(topValues[i].usd_ph) + "</span>"
+            + "<span style='position:absolute; bottom:0; right:0; font-size:14px;  color:  " + (topValues[i].usd >= topValues[i].usd_ph ? " #c3ffbb;" : "#b70526;") + " '>" + new Intl.NumberFormat("de-DE").format(topValues[i].usd_ph) + "</span>"
 
         para += "</td>";
 
@@ -285,10 +285,10 @@ async function GetCoinGood() {
         para += "<td style='position:relative' >"
             + "<a  target='_blank' href='https://www.binance.com/en/trading-bots/futures/grid/" + topValues[i].vnd_all.b + "USDT' >" + new Intl.NumberFormat("de-DE").format(topValues[i].vnd) + "</a>"
 
-            + "<span style='position:absolute; top:1px; margin-left:2px;  font-size:11px; color: #3ab829;'>" + new Intl.NumberFormat("de-DE").format(topValues[i].vnd_h) + "</span>"
-            + "<span style='position:absolute; top:15px; margin-left:2px;  font-size:11px; color: #fd254d;'>" + new Intl.NumberFormat("de-DE").format(topValues[i].vnd_lh) + "</span>"
+            + "<span style='position:absolute; top:1px; right:6px;  font-size:11px; color: #c3ffbb;'>" + new Intl.NumberFormat("de-DE").format(topValues[i].vnd_h) + "</span>"
+            + "<span style='position:absolute; top:15px; right:6px;  font-size:11px; color: #b70526;'>" + new Intl.NumberFormat("de-DE").format(topValues[i].vnd_lh) + "</span>"
 
-            + "<a  target='_blank' href='https://pro.goonus.io/futures/" + topValues[i].vnd_all.b + "_VND' > <span style='position:absolute; bottom:0; right:0; font-size:14px; color:" + (topValues[i].vnd >= topValues[i].vnd_ph ? " #3ab829;" : "#fd254d;") + " '>" + new Intl.NumberFormat("de-DE").format(topValues[i].vnd_ph) + "</span></a>"
+            + "<a  target='_blank' href='https://pro.goonus.io/futures/" + topValues[i].vnd_all.b + "_VND' > <span style='position:absolute; bottom:0; right:0; font-size:14px; color:" + (topValues[i].vnd >= topValues[i].vnd_ph ? " #c3ffbb;" : "#b70526;") + " '>" + new Intl.NumberFormat("de-DE").format(topValues[i].vnd_ph) + "</span></a>"
 
         para += "</td>";
 

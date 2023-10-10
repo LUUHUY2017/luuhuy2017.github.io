@@ -251,7 +251,7 @@ async function GetCoinGood() {
         groups[i].compare = compare;
     }
 
-    var topValues = groups.sort((a, b) => b.percent - a.percent).slice(1, 5);
+    var topValues = groups.sort((a, b) => b.percent - a.percent).slice(1, 10);
     console.log(topValues);
 
     var para = "";
